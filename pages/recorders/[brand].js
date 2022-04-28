@@ -13,7 +13,7 @@ const Brand = ({recorders}) => {
       <ul>
         {recorders.map((recorder, i) => (
           <li key={i}>
-            <Link href={`/recorders/${recorder.Brand}/${slugify(recorder.Model)}`}>
+            <Link href={`/recorders/${recorder.BrandSlug}/${recorder.ModelSlug}`}>
               {recorder.Model}
             </Link>
           </li>
