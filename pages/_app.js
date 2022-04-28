@@ -1,5 +1,9 @@
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />;
-}
+import Base from "../layouts/Base";
 
-export default MyApp;
+const MultitrackRecorders = ({ Component, pageProps }) => (
+  <Base>
+    <Component {...pageProps} />
+  </Base>
+);
+
+export default MultitrackRecorders;
