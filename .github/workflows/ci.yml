@@ -1,0 +1,22 @@
+name: Multitrack Cassette Recorders
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v2
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 17
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint all the things
+        run: npm run lint
