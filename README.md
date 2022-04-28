@@ -15,6 +15,12 @@ Visit [multitrack-cassette.netlify.app](https://multitrack-cassette.netlify.app)
 npm install
 ```
 
+* Install git hooks
+
+```bash
+npm run prepare
+```
+
 * Run a local web server with autoreload
 
 ```bash
