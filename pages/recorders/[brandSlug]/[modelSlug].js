@@ -1,16 +1,16 @@
-import {fetchRecorders, fetchRecorder} from '../../../lib/data_client';
+import { fetchRecorders, fetchRecorder } from "../../../lib/data_client";
 
-const Model = ({recorder}) => {
+const Model = ({ recorder }) => {
   return (
     <div>
       Hello, {recorder.Brand} {recorder.Model}.
     </div>
   );
-}
+};
 
 export async function getStaticPaths() {
   const recorders = await fetchRecorders();
-  const paths = recorders.map(recorder => ({
+  const paths = recorders.map((recorder) => ({
     params: { brandSlug: recorder.BrandSlug, modelSlug: recorder.ModelSlug },
   }));
 
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
     props: {
       recorder,
     },
-  }
+  };
 }
 
-export default Model
+export default Model;

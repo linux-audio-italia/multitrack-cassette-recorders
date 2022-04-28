@@ -1,17 +1,18 @@
-import { useRouter } from 'next/router'
-import { fetchRecordersBy, fetchUniqueBrands } from '../../lib/data_client';
-import Link from 'next/link'
+import { fetchRecordersBy, fetchUniqueBrands } from "../../lib/data_client";
+import Link from "next/link";
 
-const Brand = ({recorders}) => {
-  const brandName = recorders[0].Brand
+const Brand = ({ recorders }) => {
+  const brandName = recorders[0].Brand;
 
   return (
     <div>
       <p>Brand: {brandName}</p>
       <ul>
-        {recorders.map(recorder => (
+        {recorders.map((recorder) => (
           <li key={recorder.ModelSlug}>
-            <Link href={`/recorders/${recorder.BrandSlug}/${recorder.ModelSlug}`}>
+            <Link
+              href={`/recorders/${recorder.BrandSlug}/${recorder.ModelSlug}`}
+            >
               {recorder.Model}
             </Link>
           </li>
@@ -19,11 +20,11 @@ const Brand = ({recorders}) => {
       </ul>
     </div>
   );
-}
+};
 
 export async function getStaticPaths() {
   const brands = await fetchUniqueBrands();
-  const paths = brands.map(brand => ({
+  const paths = brands.map((brand) => ({
     params: { brandSlug: brand.BrandSlug },
   }));
 
@@ -40,7 +41,7 @@ export async function getStaticProps({ params }) {
     props: {
       recorders,
     },
-  }
+  };
 }
 
-export default Brand
+export default Brand;
