@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint && prettier --check ."
+    "lint": "next lint && prettier --check .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "lodash.uniqby": "^4.7.0",
@@ -18,6 +19,8 @@
     "eslint": "8.14.0",
     "eslint-config-next": "12.1.5",
     "eslint-config-prettier": "^8.5.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.1",
     "prettier": "2.6.2"
   }
 }
