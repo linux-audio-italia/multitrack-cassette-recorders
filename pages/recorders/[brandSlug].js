@@ -1,18 +1,16 @@
 import { useRouter } from 'next/router'
 import { fetchRecordersBy, fetchUniqueBrands } from '../../lib/data_client';
-import slugify from '../../lib/slugify';
 import Link from 'next/link'
 
 const Brand = ({recorders}) => {
-  const router = useRouter()
-  const { brand } = router.query
+  const brandName = recorders[0].Brand
 
   return (
     <div>
-      <p>Brand: {brand}</p>
+      <p>Brand: {brandName}</p>
       <ul>
-        {recorders.map((recorder, i) => (
-          <li key={i}>
+        {recorders.map(recorder => (
+          <li key={recorder.ModelSlug}>
             <Link href={`/recorders/${recorder.BrandSlug}/${recorder.ModelSlug}`}>
               {recorder.Model}
             </Link>
@@ -26,7 +24,7 @@ const Brand = ({recorders}) => {
 export async function getStaticPaths() {
   const brands = await fetchUniqueBrands();
   const paths = brands.map(brand => ({
-    params: { brand: slugify(brand) },
+    params: { brandSlug: brand.BrandSlug },
   }));
 
   return {
@@ -36,7 +34,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const recorders = await fetchRecordersBy(params.brand);
+  const recorders = await fetchRecordersBy(params.brandSlug);
 
   return {
     props: {
