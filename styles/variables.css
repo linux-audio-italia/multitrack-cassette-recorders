@@ -8,4 +8,6 @@
   /* Dimensions */
   --air: 20px;
   --air-s: 14px;
+  /* Fonts */
+  --font-main: "Inter", sans-serif;
 }
