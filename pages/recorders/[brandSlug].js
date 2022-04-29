@@ -10,11 +10,7 @@ const Brand = ({ recorders }) => {
       <ul>
         {recorders.map((recorder) => (
           <li key={recorder.ModelSlug}>
-            <Link
-              href={`/recorders/${recorder.BrandSlug}/${recorder.ModelSlug}`}
-            >
-              {recorder.Model}
-            </Link>
+            <Link href={recorder.ModelUrl}>{recorder.Model}</Link>
           </li>
         ))}
       </ul>
