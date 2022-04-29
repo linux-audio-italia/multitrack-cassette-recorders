@@ -1,4 +1,4 @@
-import { fetchRecordersBy, fetchUniqueBrands } from "../../lib/data_client";
+import { fetchRecordersBy, fetchUniqueBrands } from "../lib/data_client";
 import Link from "next/link";
 
 const Brand = ({ recorders }) => {

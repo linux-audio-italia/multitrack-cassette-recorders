@@ -1,4 +1,4 @@
-import { fetchRecorders, fetchRecorder } from "../../../lib/data_client";
+import { fetchRecorders, fetchRecorder } from "../../lib/data_client";
 
 const Model = ({ recorder }) => {
   return (
