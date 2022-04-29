@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "lodash.orderby": "^4.6.0",
     "lodash.uniqby": "^4.7.0",
     "next": "12.1.5",
     "react": "18.1.0",
