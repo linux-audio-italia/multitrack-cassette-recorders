@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home({ brands }) {
   return (
-    <div>
+    <>
       <aside>
         <ul>
           {brands.map((brand) => (
@@ -13,7 +13,7 @@ export default function Home({ brands }) {
           ))}
         </ul>
       </aside>
-    </div>
+    </>
   );
 }
 

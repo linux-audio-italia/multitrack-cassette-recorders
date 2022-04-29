@@ -1,0 +1,16 @@
+.SiteHeader {
+  padding-top: var(--air);
+  padding-bottom: var(--air);
+}
+
+.SiteHeader > nav {
+  display: flex;
+}
+
+.SiteHeader > nav > a {
+  display: inline-block;
+}
+
+.SiteHeader > nav > a + a {
+  margin-left: var(--air-s);
+}

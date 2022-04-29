@@ -5,7 +5,7 @@ const Brand = ({ recorders }) => {
   const brandName = recorders[0].Brand;
 
   return (
-    <div>
+    <>
       <p>Brand: {brandName}</p>
       <ul>
         {recorders.map((recorder) => (
@@ -18,7 +18,7 @@ const Brand = ({ recorders }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 
