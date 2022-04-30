@@ -3,7 +3,18 @@ import Link from "next/link";
 
 export default function Home({ brands }) {
   return (
-    <>
+    <article className="Page">
+      <header className="Page-head">
+        <h1>Multitrack Cassette Recorders</h1>
+        <p>
+          We collect data about old <b>multi track cassette recorders</b>, those
+          devices were the very first portable recording studios.
+        </p>
+        <p>
+          You can browse <Link href="/models">all the models</Link>, or{" "}
+          <Link href="/brands">select them by the brand</Link>.
+        </p>
+      </header>
       <aside>
         <ul>
           {brands.map((brand) => (
@@ -13,7 +24,7 @@ export default function Home({ brands }) {
           ))}
         </ul>
       </aside>
-    </>
+    </article>
   );
 }
 

@@ -5,9 +5,14 @@
   --white: #fff;
   --hi: #00f;
   --hi-variant: #009;
+
   /* Dimensions */
-  --air: 20px;
   --air-s: 14px;
-  /* Fonts */
-  --font-main: "Inter", sans-serif;
+  --air: 20px;
+  --air-l: 40px;
+
+  /* Typography */
+  --font-main: "Work Sans", sans-serif;
+  --base: 18px;
+  --h1: 2.4rem;
 }

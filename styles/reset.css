@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   font-family: var(--font-main);
-  font-size: 16px;
+  font-size: var(--base);
   color: var(--black);
 }
 
