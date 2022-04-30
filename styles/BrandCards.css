@@ -1,0 +1,19 @@
+.BrandCard > a {
+  background-color: var(--white-d);
+  border-radius: var(--air-xs);
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: var(--air);
+  transition: transform 0.2s;
+}
+
+.BrandCard > a:hover {
+  transform: translateY(-4px);
+}
+
+.BrandCards {
+  display: grid;
+  grid-gap: var(--air);
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+}

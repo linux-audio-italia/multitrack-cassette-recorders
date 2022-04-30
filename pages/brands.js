@@ -1,5 +1,5 @@
 import { fetchUniqueBrands } from "../lib/data_client";
-import BrandsList from "../components/BrandsList";
+import BrandCards from "../components/BrandCards";
 
 export default function Brands({ brands }) {
   return (
@@ -8,7 +8,7 @@ export default function Brands({ brands }) {
         <h1>Select recorders by brand</h1>
       </header>
       <div className="Page-content">
-        <BrandsList brands={brands} />
+        <BrandCards brands={brands} />
       </div>
     </article>
   );

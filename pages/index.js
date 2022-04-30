@@ -1,6 +1,6 @@
 import { fetchUniqueBrands } from "../lib/data_client";
 import Link from "next/link";
-import BrandsList from "../components/BrandsList";
+import BrandCards from "../components/BrandCards";
 
 export default function Home({ brands }) {
   return (
@@ -19,7 +19,7 @@ export default function Home({ brands }) {
         </p>
       </div>
       <aside>
-        <BrandsList brands={brands} />
+        <BrandCards brands={brands} />
       </aside>
     </article>
   );

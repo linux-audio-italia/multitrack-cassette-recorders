@@ -3,11 +3,12 @@
   padding-bottom: var(--air-l);
 }
 
+.Page-head,
+.Page-content {
+  margin-bottom: var(--air-l);
+}
+
 .Page-head > h1 {
   font-size: var(--h1);
   font-weight: 600;
-}
-
-.Page-content {
-  margin-top: var(--air-l);
 }

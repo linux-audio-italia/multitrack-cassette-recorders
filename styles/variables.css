@@ -3,10 +3,12 @@
   --black: #000;
   --black-l: #333;
   --white: #fff;
+  --white-d: #eee;
   --hi: #00f;
   --hi-variant: #009;
 
   /* Dimensions */
+  --air-xs: 10px;
   --air-s: 14px;
   --air: 20px;
   --air-l: 40px;
