@@ -1,5 +1,5 @@
 import { fetchRecorders } from "../lib/data_client";
-import Link from "next/link";
+import ModelCards from "../components/ModelCards";
 
 export default function Models({ models }) {
   return (
@@ -8,15 +8,7 @@ export default function Models({ models }) {
         <h1>A list of all models on this site</h1>
       </header>
       <div className="Page-content">
-        <ul>
-          {models.map((model) => (
-            <li key={model.ModelUrl}>
-              <Link
-                href={model.ModelUrl}
-              >{`${model.Brand} ${model.Model}`}</Link>
-            </li>
-          ))}
-        </ul>
+        <ModelCards models={models} />
       </div>
     </article>
   );
