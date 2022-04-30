@@ -1,5 +1,6 @@
 import { fetchUniqueBrands } from "../lib/data_client";
 import Link from "next/link";
+import BrandsList from "../components/BrandsList";
 
 export default function Home({ brands }) {
   return (
@@ -18,13 +19,7 @@ export default function Home({ brands }) {
         </p>
       </div>
       <aside>
-        <ul>
-          {brands.map((brand) => (
-            <li key={brand.BrandSlug}>
-              <Link href={brand.BrandUrl}>{brand.Brand}</Link>
-            </li>
-          ))}
-        </ul>
+        <BrandsList brands={brands} />
       </aside>
     </article>
   );
