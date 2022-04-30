@@ -8,6 +8,6 @@
   font-weight: 600;
 }
 
-.Page-head > h1 + * {
+.Page-content {
   margin-top: var(--air-l);
 }

@@ -2,9 +2,14 @@ import { fetchRecorders, fetchRecorder } from "../../lib/data_client";
 
 const Model = ({ recorder }) => {
   return (
-    <p>
-      Hello, {recorder.Brand} {recorder.Model}.
-    </p>
+    <article className="Page">
+      <header className="Page-head">
+        <h1>
+          {recorder.Brand} {recorder.Model}
+        </h1>
+      </header>
+      <div className="Page-content">TODO</div>
+    </article>
   );
 };
 
