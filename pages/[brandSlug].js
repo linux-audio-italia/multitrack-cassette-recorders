@@ -1,4 +1,5 @@
 import { fetchRecordersBy, fetchUniqueBrands } from "../lib/data_client";
+import ModelCards from "../components/ModelCards";
 import Link from "next/link";
 
 const Brand = ({ recorders }) => {
@@ -10,13 +11,7 @@ const Brand = ({ recorders }) => {
         <h1>All the models of {brandName}</h1>
       </header>
       <div className="Page-content">
-        <ul>
-          {recorders.map((recorder) => (
-            <li key={recorder.ModelSlug}>
-              <Link href={recorder.ModelUrl}>{recorder.Model}</Link>
-            </li>
-          ))}
-        </ul>
+        <ModelCards models={recorders} />
       </div>
     </article>
   );
