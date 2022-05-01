@@ -1,13 +1,15 @@
 :root {
   /* Colors */
   --black: #000;
-  --black-l: #333;
+  --black-l: #444;
   --white: #fff;
   --white-d: #eee;
   --hi: #00f;
   --hi-variant: #009;
 
   /* Dimensions */
+  --air-xxxs: 2px;
+  --air-xxs: 6px;
   --air-xs: 10px;
   --air-s: 14px;
   --air: 20px;
