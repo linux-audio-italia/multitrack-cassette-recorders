@@ -1,4 +1,4 @@
-import { fetchUniqueBrands } from "../lib/data_client";
+import { fetchRecorders } from "../lib/data_client";
 import BrandCards from "../components/BrandCards";
 
 export default function Brands({ brands }) {
@@ -15,7 +15,7 @@ export default function Brands({ brands }) {
 }
 
 export async function getStaticProps() {
-  const brands = await fetchUniqueBrands();
+  const brands = await fetchRecorders();
 
   return {
     props: {

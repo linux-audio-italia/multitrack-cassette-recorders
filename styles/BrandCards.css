@@ -5,11 +5,12 @@
   text-decoration: none;
   text-align: center;
   padding: var(--air);
-  transition: transform 0.2s;
+  font-weight: 600;
 }
 
-.BrandCard > a:hover {
-  transform: translateY(-4px);
+.BrandCard-nmodels {
+  font-weight: 500;
+  font-size: 0.95rem;
 }
 
 .BrandCards {

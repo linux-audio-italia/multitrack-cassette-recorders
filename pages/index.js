@@ -1,4 +1,4 @@
-import { fetchUniqueBrands } from "../lib/data_client";
+import { fetchRecorders } from "../lib/data_client";
 import Link from "next/link";
 import BrandCards from "../components/BrandCards";
 
@@ -26,7 +26,8 @@ export default function Home({ brands }) {
 }
 
 export async function getStaticProps() {
-  const brands = await fetchUniqueBrands();
+  const brands = await fetchRecorders();
+  console.log(brands);
 
   return {
     props: {

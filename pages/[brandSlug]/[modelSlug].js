@@ -1,23 +1,36 @@
 import { fetchRecorders, fetchRecorder } from "../../lib/data_client";
 
-const Model = ({ recorder }) => {
-  return (
+const Model = ({ recorder, error }) =>
+  error === null ? (
     <article className="Page">
       <header className="Page-head">
         <h1>
-          {recorder.Brand} {recorder.Model}
+          {recorder.brand} {recorder.name}
         </h1>
       </header>
       <div className="Page-content">TODO</div>
     </article>
+  ) : (
+    <article className="Page">
+      <header className="Page-head">
+        <h1>This recorder data is missing.</h1>
+      </header>
+      <div className="Page-content">
+        <p>If you want to add data for this model, you can...</p>
+      </div>
+    </article>
   );
-};
 
 export async function getStaticPaths() {
-  const recorders = await fetchRecorders();
-  const paths = recorders.map((recorder) => ({
-    params: { brandSlug: recorder.BrandSlug, modelSlug: recorder.ModelSlug },
-  }));
+  const brands = await fetchRecorders();
+  const paths = brands.flatMap((brand) =>
+    brand.models.map((model) => ({
+      params: {
+        brandSlug: brand.slug,
+        modelSlug: model.slug,
+      },
+    }))
+  );
 
   return {
     paths,
@@ -26,11 +39,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const recorder = await fetchRecorder(params.brandSlug, params.modelSlug);
+  const [error, data] = await fetchRecorder(params.brandSlug, params.modelSlug);
+  const recorder = data.pop() || null;
 
   return {
     props: {
       recorder,
+      error,
     },
   };
 }
