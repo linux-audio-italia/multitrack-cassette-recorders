@@ -1,26 +1,23 @@
-import { fetchRecordersBy, fetchUniqueBrands } from "../lib/data_client";
+import { fetchRecorders, fetchRecordersBy } from "../lib/data_client";
 import ModelCards from "../components/ModelCards";
-import Link from "next/link";
 
-const Brand = ({ recorders }) => {
-  const brandName = recorders[0].Brand;
-
+const Brand = ({ brand }) => {
   return (
     <article className="Page">
       <header className="Page-head">
-        <h1>All the models of {brandName}</h1>
+        <h1>All the models of {brand.brand}</h1>
       </header>
       <div className="Page-content">
-        <ModelCards models={recorders} />
+        <ModelCards models={brand.models} />
       </div>
     </article>
   );
 };
 
 export async function getStaticPaths() {
-  const brands = await fetchUniqueBrands();
+  const brands = await fetchRecorders();
   const paths = brands.map((brand) => ({
-    params: { brandSlug: brand.BrandSlug },
+    params: { brandSlug: brand.slug },
   }));
 
   return {
@@ -30,11 +27,11 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const recorders = await fetchRecordersBy(params.brandSlug);
+  const brand = await fetchRecordersBy(params.brandSlug);
 
   return {
     props: {
-      recorders,
+      brand,
     },
   };
 }

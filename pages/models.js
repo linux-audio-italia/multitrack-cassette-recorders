@@ -1,4 +1,4 @@
-import { fetchRecorders } from "../lib/data_client";
+import { fetchOnlyModels } from "../lib/data_client";
 import ModelCards from "../components/ModelCards";
 
 export default function Models({ recorders }) {
@@ -15,7 +15,7 @@ export default function Models({ recorders }) {
 }
 
 export async function getStaticProps() {
-  const recorders = await fetchRecorders();
+  const recorders = await fetchOnlyModels();
 
   return {
     props: {

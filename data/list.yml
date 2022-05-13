@@ -1,0 +1,33 @@
+- brand: Yamaha
+  models:
+    - MT3X
+    - MT4X
+    - MT8X
+    - MT50
+    - MT100
+- brand: Tascam
+  models:
+    - 414 mkI Portastudio
+    - 414 mkII Portastudio
+    - 424 mkI PortaStudio
+    - 424 mkII PortaStudio
+    - 424 mkIII PortaStudio
+- brand: Fostex
+  models:
+    - 250
+    - 280
+    - X 15
+    - X 18
+    - X 26
+    - X 28
+    - X 28h
+- brand: Teac
+  models:
+    - 144
+    - 244
+- brand: Marantz
+  models:
+    - PMD 740
+- brand: Akai
+  models:
+    - MG 614
