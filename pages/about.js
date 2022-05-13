@@ -1,3 +1,5 @@
+import ExternalLink from "../components/ExternalLink";
+
 const About = () => (
   <article className="Page">
     <header className="Page-head">
@@ -14,9 +16,10 @@ const About = () => (
         <figcaption>
           David Mellor, <cite>&quot;Hands On: Cassette Multitracks&quot;</cite>{" "}
           on{" "}
-          <a href="http://www.muzines.co.uk/articles/hands-on-cassette-multitracks/9522">
-            Sound On Sound - Oct 1992
-          </a>
+          <ExternalLink
+            to="http://www.muzines.co.uk/articles/hands-on-cassette-multitracks/9522"
+            text="Sound On Sound - Oct 1992"
+          />
         </figcaption>
       </figure>
     </div>

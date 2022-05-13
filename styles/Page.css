@@ -14,20 +14,24 @@
 }
 
 blockquote {
-  background: var(--white-a);
-  border-left: 10px solid var(--gray-c);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
+  background: var(--gray-3);
+  border-left: 10px solid var(--gray);
+  border-radius: var(--air-xs);
+  padding: 1em;
   quotes: "\201C""\201D""\2018""\2019";
+  margin-bottom: var(--air);
+  line-height: 1.6;
 }
+
 blockquote:before {
-  color: var(--gray-c);
+  color: var(--gray);
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
+
 blockquote p {
   display: inline;
 }

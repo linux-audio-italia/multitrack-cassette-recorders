@@ -1,5 +1,5 @@
 .BrandCard > a {
-  background-color: var(--white-d);
+  background-color: var(--gray-2);
   border-radius: var(--air-xs);
   display: block;
   text-decoration: none;
