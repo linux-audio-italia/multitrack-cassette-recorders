@@ -39,3 +39,16 @@ blockquote p {
 cite {
   font-style: italic;
 }
+
+.Page-content li {
+  line-height: 1.6;
+}
+
+code {
+  background-color: var(--gray-2);
+  font-size: 0.9rem;
+  padding: var(--air-xxs) var(--air-xs);
+  display: inline-block;
+  border-radius: var(--air-xxs);
+  font-family: monospace;
+}

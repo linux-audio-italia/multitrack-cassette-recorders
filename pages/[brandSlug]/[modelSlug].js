@@ -1,24 +1,17 @@
-import { fetchRecorders, fetchRecorder } from "../../lib/data_client";
+import {
+  fetchRecorders,
+  fetchRecorderDetails,
+  fetchRecorderBy,
+} from "../../lib/data_client";
 
-const Model = ({ recorder, error }) =>
+import ModelDetail from "../../components/ModelDetail.js";
+import ModelNotFound from "../../components/ModelNotFound.js";
+
+const Model = ({ recorder, recorderDetails, error }) =>
   error === null ? (
-    <article className="Page">
-      <header className="Page-head">
-        <h1>
-          {recorder.brand} {recorder.name}
-        </h1>
-      </header>
-      <div className="Page-content">TODO</div>
-    </article>
+    <ModelDetail recorder={recorderDetails} />
   ) : (
-    <article className="Page">
-      <header className="Page-head">
-        <h1>This recorder data is missing.</h1>
-      </header>
-      <div className="Page-content">
-        <p>If you want to add data for this model, you can...</p>
-      </div>
-    </article>
+    <ModelNotFound recorder={recorder} />
   );
 
 export async function getStaticPaths() {
@@ -39,12 +32,17 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const [error, data] = await fetchRecorder(params.brandSlug, params.modelSlug);
-  const recorder = data.pop() || null;
+  const recorder = await fetchRecorderBy(params.brandSlug, params.modelSlug);
+  const [error, data] = await fetchRecorderDetails(
+    params.brandSlug,
+    params.modelSlug
+  );
+  const recorderDetails = data.pop() || null;
 
   return {
     props: {
       recorder,
+      recorderDetails,
       error,
     },
   };
