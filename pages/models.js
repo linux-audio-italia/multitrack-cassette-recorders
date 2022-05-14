@@ -14,12 +14,6 @@ export default function Models({ recorders }) {
   );
 }
 
-export async function getStaticProps() {
-  const recorders = await fetchOnlyModels();
-
-  return {
-    props: {
-      recorders,
-    },
-  };
-}
+export const getStaticProps = async () => ({
+  props: { recorders: await fetchOnlyModels() },
+});

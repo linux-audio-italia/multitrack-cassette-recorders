@@ -26,14 +26,8 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }) {
-  const brand = await fetchRecordersBy(params.brandSlug);
-
-  return {
-    props: {
-      brand,
-    },
-  };
-}
+export const getStaticProps = async ({ params }) => ({
+  props: { brand: await fetchRecordersBy(params.brandSlug) },
+});
 
 export default Brand;

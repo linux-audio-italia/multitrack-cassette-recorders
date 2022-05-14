@@ -7,6 +7,7 @@ import "../styles/SiteFooter.css";
 import "../styles/Page.css";
 import "../styles/BrandCards.css";
 import "../styles/ModelCards.css";
+import "../styles/ModelDetail.css";
 
 const MultitrackRecorders = ({ Component, pageProps }) => (
   <Base>

@@ -1,0 +1,23 @@
+.ModelDetail-features {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.4rem;
+}
+
+.ModelDetail-features dt {
+  flex: 0 0 30%;
+}
+
+.ModelDetail-features dd {
+  flex: 0 0 70%;
+}
+
+.ModelDetail-features dd,
+.ModelDetail-features dt {
+  padding: var(--air-s) 0;
+}
+
+.ModelDetail-features dd:not(:last-of-type),
+.ModelDetail-features dt:not(:last-of-type) {
+  border-bottom: 1px solid var(--gray);
+}

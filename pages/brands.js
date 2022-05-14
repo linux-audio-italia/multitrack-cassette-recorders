@@ -14,12 +14,6 @@ export default function Brands({ brands }) {
   );
 }
 
-export async function getStaticProps() {
-  const brands = await fetchRecorders();
-
-  return {
-    props: {
-      brands,
-    },
-  };
-}
+export const getStaticProps = async () => ({
+  props: { brands: await fetchRecorders() },
+});
