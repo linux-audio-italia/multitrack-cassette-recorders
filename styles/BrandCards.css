@@ -13,6 +13,14 @@
   font-size: 0.95rem;
 }
 
+.BrandCard-picture {
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 40px;
+  margin-bottom: var(--air-xs);
+}
+
 .BrandCards {
   display: grid;
   grid-gap: var(--air);

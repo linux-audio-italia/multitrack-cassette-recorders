@@ -8,6 +8,10 @@ const BrandCard = ({ brand }) => {
     <div className="BrandCard">
       <Link href={brand.href}>
         <a>
+          <div
+            className="BrandCard-picture"
+            style={{ backgroundImage: `url(${brand.image})` }}
+          />
           <p>{brand.brand} </p>
           <p className="BrandCard-nmodels">{n_models_label}</p>
         </a>
