@@ -32,6 +32,7 @@ body {
   font-family: var(--font-main);
   font-size: var(--base);
   color: var(--black);
+  background-color: var(--palette1);
 }
 
 a {
