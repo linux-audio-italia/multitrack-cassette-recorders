@@ -8,6 +8,10 @@
   margin-bottom: var(--air-l);
 }
 
+.Page-toc > a + a {
+  margin-left: var(--air-xs);
+}
+
 .Page-head > h1 {
   font-size: 2rem;
   font-weight: 600;

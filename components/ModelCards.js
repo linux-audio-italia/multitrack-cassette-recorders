@@ -1,11 +1,11 @@
 import ModelCard from "./ModelCard";
 
 const ModelCards = ({ models }) => (
-  <div className="ModelCards">
+  <ul className="ModelCards">
     {models.map((model) => (
       <ModelCard model={model} key={model.slug} />
     ))}
-  </div>
+  </ul>
 );
 
 export default ModelCards;
