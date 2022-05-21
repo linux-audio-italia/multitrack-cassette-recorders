@@ -1,11 +1,7 @@
 :root {
   /* Colors */
   --black: #000;
-  --black-l: #444;
   --white: #fff;
-  --gray: #ccc;
-  --gray-2: #eee;
-  --gray-3: #f5f5f5;
   --hi: #00f;
   --hi-variant: #009;
 
@@ -22,10 +18,10 @@
   --air-s: 14px;
   --air: 20px;
   --air-l: 40px;
+  --air-xl: 80px;
 
   /* Typography */
   --font-main: "Work Sans", sans-serif;
   --font-logo: "Lobster", sans-serif;
   --base: 18px;
-  --h1: 2.4rem;
 }

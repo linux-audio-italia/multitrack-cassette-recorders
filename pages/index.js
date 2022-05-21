@@ -1,10 +1,12 @@
 import { fetchRecorders } from "../lib/data_client";
 import Link from "next/link";
 import BrandCards from "../components/BrandCards";
+import { title } from "../lib/utils";
 
 export default function Home({ brands }) {
   return (
     <article className="Page">
+      {title("Multitrack Cassette Recorders")}
       <header className="Page-head">
         <h1>Multitrack Cassette Recorders</h1>
       </header>
@@ -17,10 +19,8 @@ export default function Home({ brands }) {
           You can browse <Link href="/models">all the models</Link>, or{" "}
           <Link href="/brands">select them by the brand</Link>.
         </p>
-      </div>
-      <aside>
         <BrandCards brands={brands} />
-      </aside>
+      </div>
     </article>
   );
 }

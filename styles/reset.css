@@ -36,12 +36,12 @@ body {
 }
 
 a {
-  color: var(--hi);
+  color: var(--palette5);
 }
 
 a:hover,
 a:active {
-  color: var(--hi-variant);
+  color: var(--palette4);
 }
 
 img,

@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const ModelCard = ({ model }) => (
-  <li className="ModelCard">
+  <div className="ModelCard">
     <Link href={model.href}>{model.name}</Link>
-  </li>
+  </div>
 );
 
 export default ModelCard;

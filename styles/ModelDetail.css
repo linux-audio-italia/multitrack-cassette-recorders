@@ -19,5 +19,5 @@
 
 .ModelDetail-features dd:not(:last-of-type),
 .ModelDetail-features dt:not(:last-of-type) {
-  border-bottom: 1px solid var(--gray);
+  border-bottom: 1px solid var(--palette5);
 }

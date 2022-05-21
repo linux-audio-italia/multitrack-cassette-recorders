@@ -9,13 +9,20 @@
 }
 
 .Page-head > h1 {
-  font-size: var(--h1);
+  font-size: 2rem;
   font-weight: 600;
 }
 
+.Page-content > * + * {
+  margin-top: var(--air-l);
+}
+
+.Page-content > p + p {
+  margin-top: var(--air-s);
+}
+
 blockquote {
-  background: var(--gray-3);
-  border-left: 10px solid var(--gray);
+  background: var(--white);
   border-radius: var(--air-xs);
   padding: 1em;
   quotes: "\201C""\201D""\2018""\2019";
@@ -24,7 +31,7 @@ blockquote {
 }
 
 blockquote:before {
-  color: var(--gray);
+  color: var(--palette3);
   content: open-quote;
   font-size: 4em;
   line-height: 0.1em;
@@ -45,7 +52,7 @@ cite {
 }
 
 code {
-  background-color: var(--gray-2);
+  background-color: var(--white);
   font-size: 0.9rem;
   padding: var(--air-xxs) var(--air-xs);
   display: inline-block;

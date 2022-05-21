@@ -8,6 +8,7 @@ export default function Brands({ brands }) {
         <h1>Select recorders by brand</h1>
       </header>
       <div className="Page-content">
+        <p>Click on a brand to see a list of its models.</p>
         <BrandCards brands={brands} />
       </div>
     </article>

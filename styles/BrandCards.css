@@ -1,11 +1,17 @@
 .BrandCard > a {
-  background-color: var(--gray-2);
+  background-color: var(--white);
   border-radius: var(--air-xs);
   display: block;
   text-decoration: none;
   text-align: center;
-  padding: var(--air);
+  padding: var(--air-l);
   font-weight: 600;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.BrandCard > a:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .BrandCard-nmodels {
