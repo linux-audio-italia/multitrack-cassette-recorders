@@ -1,16 +1,24 @@
 .SiteHeader {
-  padding-top: var(--air);
-  padding-bottom: var(--air);
-}
-
-.SiteHeader > nav {
-  display: flex;
+  padding-top: var(--air-l);
+  padding-bottom: var(--air-l);
+  text-align: center;
+  background-image: url(/images/bg.png);
 }
 
 .SiteHeader > nav > a {
   display: inline-block;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-left: var(--air-xs);
+  padding-right: var(--air-xs);
 }
 
-.SiteHeader > nav > a + a {
-  margin-left: var(--air-s);
+.SiteHeader-logo {
+  display: inline-block;
+  font-family: var(--font-logo);
+  font-size: 3rem;
+  text-decoration: none;
+  color: var(--black);
+  margin-bottom: var(--air);
 }
