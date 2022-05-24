@@ -1,16 +1,30 @@
 - name: X-28h
   brand: Fostex
-  # Mixer
-  mix_channels: 8
-  chan_eq: n/a
-  master_eq: 2 band graphic
-  aux_sends: 1
-  aux_returns: 1 stereo
-  # Recorder
-  rec_tracks: 4
-  max_simultaneous_rec_tracks: 4
-  individual_track_outs: yes
-  year: 1991?
-  low_speed: 4.75 cm/s
-  hi_speed: 9.5 cm/s
-  noise_reduction: Dolby B
+  year: 1992
+  description: >
+    The fostex X-28h is one of the most compact multitrack cassette
+    recorders, for sure the smallest with eight mixer channels. It
+    can run at normal speed and at high speed.
+
+    It uses Dolby B noise reduction.
+
+  tape:
+    rec_tracks: 4
+    simultaneous_rec_tracks: 4
+    norm_speed: 4.75 cm/s
+    high_speed: 9.5 cm/s
+    noise_reduction: Dolby B
+    return_to_zero: yes
+    locators: n/a
+    varispeed: ±10%
+  mixer:
+    mix_channels: 8
+    chan_eq: n/a
+    master_eq: 2 band graphic
+    aux_sends: 1
+    aux_returns: 1 stereo
+    individual_track_outs: yes
+  links:
+    manual: https://www.fostexinternational.com/public/fostex_download.php?f=x28h_owners_manual.pdf
+    review 1: http://www.muzines.co.uk/articles/fostex-x28/7544
+    review 2: http://www.muzines.co.uk/articles/fostex-x28/944

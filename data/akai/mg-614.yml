@@ -1,8 +1,29 @@
 - name: MG 614
   brand: Akai
-  mix_channels: 6
-  rec_tracks: 4
   year: 1987
-  low_speed: 4.75 cm/s
-  hi_speed: 9.5 cm/s
-  max_simultaneous_rec_tracks: 4
+  description: >
+    The Akai MG 614 is often described as the "Rolls Royce" of
+    cassette 4 tracks, because it's built to a professional standard
+    and has some features not found in any other recorder, like an
+    hidden sync track that makes it able to sync to MIDI without
+    sacrificing a track, or XLR sockets: a feature found only much
+    later, and in very few models.
+
+  mixer:
+    mix_channels: 6
+    chan_eq: 2 band semi parametric, with defeat switch
+    master_eq: n/a
+    aux_sends: 2
+    aux_returns: 2 stereo
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 4
+    low_speed: 4.75 cm/s
+    high_speed: 9.5 cm/s
+    simultaneous_rec_tracks: 4
+    noise_reduction: dbx
+    return_to_zero: yes
+    locators: 3 memories + capture
+    varispeed: ±10%
+  links:
+    review: http://www.muzines.co.uk/articles/akai-mg614-recorder/11370

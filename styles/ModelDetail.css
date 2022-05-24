@@ -21,3 +21,32 @@
 .ModelDetail-features dt:not(:last-of-type) {
   border-bottom: 1px solid var(--palette5);
 }
+
+.ModelDetail-description {
+  margin-bottom: 2em;
+}
+
+.ModelDetail-tablehead {
+  font-size: 1.4rem;
+  /* background-color: var(--palette4); */
+  color: var(--palette4);
+  text-align: right;
+}
+
+.ModelDetail-table th {
+  border-bottom: 1px solid var(--palette4);
+}
+
+.ModelDetail-table td,
+th {
+  padding: 0.3em;
+}
+
+.ModelDetail-model {
+  color: var(--palette5);
+}
+
+.ModelDetail-links {
+  margin-top: 2em;
+  color: var(--palette5);
+}
