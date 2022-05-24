@@ -1,0 +1,7 @@
+- name: X-26
+  brand: Fostex
+  mix_channels: 4
+  rec_tracks: 4
+  max_simultaneous_rec_tracks: 2
+  year: 1988
+  low_speed: 4.75 cm/s

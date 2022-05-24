@@ -1,5 +1,8 @@
 - name: MG 614
   brand: Akai
   mix_channels: 6
-  rec_channels: 4
+  rec_tracks: 4
   year: 1987
+  low_speed: 4.75 cm/s
+  hi_speed: 9.5 cm/s
+  max_simultaneous_rec_tracks: 4
