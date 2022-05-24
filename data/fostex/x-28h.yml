@@ -1,8 +1,16 @@
 - name: X-28h
   brand: Fostex
+  # Mixer
   mix_channels: 8
+  chan_eq: n/a
+  master_eq: 2 band graphic
+  aux_sends: 1
+  aux_returns: 1 stereo
+  # Recorder
   rec_tracks: 4
   max_simultaneous_rec_tracks: 4
+  individual_track_outs: yes
   year: 1991?
   low_speed: 4.75 cm/s
   hi_speed: 9.5 cm/s
+  noise_reduction: Dolby B
