@@ -1,11 +1,12 @@
 import ExternalLink from "./ExternalLink";
 
-const TableRow = (rowTitle, value) => (
-  <tr>
-    <td>{rowTitle}</td>
-    <td>{value}</td>
-  </tr>
-);
+const TableRow = (rowTitle, value) =>
+  value ? (
+    <tr>
+      <td>{rowTitle}</td>
+      <td>{value}</td>
+    </tr>
+  ) : null;
 
 const Links = ({ links }) => {
   if (Object.keys(links).length == 0) return null;
@@ -66,13 +67,12 @@ const ModelDetail = ({ recorder }) => {
             </tr>
           </thead>
           <tbody>
-            {mix_channels && TableRow("number of channels", mix_channels)}
-            {chan_eq && TableRow("channel equalization", chan_eq)}
-            {master_eq && TableRow("master bus equalization", master_eq)}
-            {aux_sends && TableRow("aux sends", aux_sends)}
-            {aux_returns && TableRow("aux returns", aux_returns)}
-            {individual_track_outs &&
-              TableRow("individual track outputs", individual_track_outs)}
+            {TableRow("number of channels", mix_channels)}
+            {TableRow("channel equalization", chan_eq)}
+            {TableRow("master bus equalization", master_eq)}
+            {TableRow("aux sends", aux_sends)}
+            {TableRow("aux returns", aux_returns)}
+            {TableRow("individual track outputs", individual_track_outs)}
           </tbody>
         </table>
         <table width="100%" className="ModelDetail-table">
@@ -82,17 +82,15 @@ const ModelDetail = ({ recorder }) => {
             </tr>
           </thead>
           <tbody>
-            {rec_tracks && TableRow("recording tracks", rec_tracks)}
-            {simultaneous_rec_tracks &&
-              TableRow("tracks recordable at once", simultaneous_rec_tracks)}
-            {low_speed && TableRow("low speed", low_speed)}
-            {norm_speed && TableRow("normal speed", norm_speed)}
-            {high_speed && TableRow("high speed", high_speed)}
-            {noise_reduction && TableRow("noise reduction", noise_reduction)}
-            {return_to_zero &&
-              TableRow("return to zero function", return_to_zero)}
-            {locators && TableRow("memory locators", locators)}
-            {varispeed && TableRow("pitch control (varispeed)", varispeed)}
+            {TableRow("recording tracks", rec_tracks)}
+            {TableRow("tracks recordable at once", simultaneous_rec_tracks)}
+            {TableRow("low speed", low_speed)}
+            {TableRow("normal speed", norm_speed)}
+            {TableRow("high speed", high_speed)}
+            {TableRow("noise reduction", noise_reduction)}
+            {TableRow("return to zero function", return_to_zero)}
+            {TableRow("memory locators", locators)}
+            {TableRow("pitch control (varispeed)", varispeed)}
           </tbody>
         </table>
       </div>
