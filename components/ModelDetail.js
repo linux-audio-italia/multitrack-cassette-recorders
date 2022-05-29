@@ -26,27 +26,35 @@ const Links = ({ links }) => {
 };
 
 const ModelDetail = ({ recorder }) => {
-  const mixer = recorder.mixer ? recorder.mixer : {};
-  const tape = recorder.tape ? recorder.tape : {};
   const links = recorder.links ? recorder.links : {};
-  const mixer_rows = [
-    ["mix_channels", "number of channels"],
-    ["chan_eq", "channel equalization"],
-    ["master_eq", "master bus equalization"],
-    ["aux_sends", "aux sends"],
-    ["aux_returns", "aux returns"],
-    ["individual_track_outs", "individual track outputs"],
-  ];
-  const tape_rows = [
-    ["rec_tracks", "recording tracks"],
-    ["simultaneous_rec_tracks", "tracks recordable at once"],
-    ["low_speed", "low speed"],
-    ["norm_speed", "normal speed"],
-    ["high_speed", "high speed"],
-    ["noise_reduction", "noise reduction"],
-    ["return_to_zero", "return to zero function"],
-    ["locators", "memory locators"],
-    ["varispeed", "pitch control (varispeed)"],
+  const tables = [
+    {
+      data: recorder.mixer ? recorder.mixer : {},
+      title: "Mixer section",
+      rows: [
+        ["mix_channels", "number of channels"],
+        ["chan_eq", "channel equalization"],
+        ["master_eq", "master bus equalization"],
+        ["aux_sends", "aux sends"],
+        ["aux_returns", "aux returns"],
+        ["individual_track_outs", "individual track outputs"],
+      ],
+    },
+    {
+      data: recorder.tape ? recorder.tape : {},
+      title: "Tape recorder section",
+      rows: [
+        ["rec_tracks", "recording tracks"],
+        ["simultaneous_rec_tracks", "tracks recordable at once"],
+        ["low_speed", "low speed"],
+        ["norm_speed", "normal speed"],
+        ["high_speed", "high speed"],
+        ["noise_reduction", "noise reduction"],
+        ["return_to_zero", "return to zero function"],
+        ["locators", "memory locators"],
+        ["varispeed", "pitch control (varispeed)"],
+      ],
+    },
   ];
 
   return (
@@ -60,26 +68,20 @@ const ModelDetail = ({ recorder }) => {
       <div className="Page-content">
         <p className="ModelDetail-description">{recorder.description}</p>
         <Links links={links} />
-        <table width="100%" className="ModelDetail-table">
-          <thead>
-            <tr>
-              <th colSpan="2">Mixer section</th>
-            </tr>
-          </thead>
-          <tbody>
-            {mixer_rows.map(([k, label]) => TableRow(label, mixer[k], k))}
-          </tbody>
-        </table>
-        <table width="100%" className="ModelDetail-table">
-          <thead>
-            <tr className="ModelDetail-tablehead">
-              <th colSpan="2">Tape recorder section</th>
-            </tr>
-          </thead>
-          <tbody>
-            {tape_rows.map(([k, label]) => TableRow(label, tape[k], k))}
-          </tbody>
-        </table>
+        {tables.map((table) => (
+          <table key={table.title} width="100%" className="ModelDetail-table">
+            <thead>
+              <tr>
+                <th colSpan="2">{table.title}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {table.rows.map(([k, label]) =>
+                TableRow(label, table.data[k], k)
+              )}
+            </tbody>
+          </table>
+        ))}
       </div>
     </article>
   );
