@@ -1,8 +1,8 @@
 import ExternalLink from "./ExternalLink";
 
-const TableRow = (rowTitle, value) =>
+const TableRow = (rowTitle, value, key = null) =>
   value ? (
-    <tr>
+    <tr key={key}>
       <td>{rowTitle}</td>
       <td>{value}</td>
     </tr>
@@ -29,25 +29,25 @@ const ModelDetail = ({ recorder }) => {
   const mixer = recorder.mixer ? recorder.mixer : {};
   const tape = recorder.tape ? recorder.tape : {};
   const links = recorder.links ? recorder.links : {};
-  const {
-    mix_channels,
-    chan_eq,
-    master_eq,
-    aux_sends,
-    aux_returns,
-    individual_track_outs,
-  } = mixer;
-  const {
-    rec_tracks,
-    simultaneous_rec_tracks,
-    low_speed,
-    norm_speed,
-    high_speed,
-    noise_reduction,
-    return_to_zero,
-    locators,
-    varispeed,
-  } = tape;
+  const mixer_rows = [
+    ["mix_channels", "number of channels"],
+    ["chan_eq", "channel equalization"],
+    ["master_eq", "master bus equalization"],
+    ["aux_sends", "aux sends"],
+    ["aux_returns", "aux returns"],
+    ["individual_track_outs", "individual track outputs"],
+  ];
+  const tape_rows = [
+    ["rec_tracks", "recording tracks"],
+    ["simultaneous_rec_tracks", "tracks recordable at once"],
+    ["low_speed", "low speed"],
+    ["norm_speed", "normal speed"],
+    ["high_speed", "high speed"],
+    ["noise_reduction", "noise reduction"],
+    ["return_to_zero", "return to zero function"],
+    ["locators", "memory locators"],
+    ["varispeed", "pitch control (varispeed)"],
+  ];
 
   return (
     <article className="Page">
@@ -67,12 +67,7 @@ const ModelDetail = ({ recorder }) => {
             </tr>
           </thead>
           <tbody>
-            {TableRow("number of channels", mix_channels)}
-            {TableRow("channel equalization", chan_eq)}
-            {TableRow("master bus equalization", master_eq)}
-            {TableRow("aux sends", aux_sends)}
-            {TableRow("aux returns", aux_returns)}
-            {TableRow("individual track outputs", individual_track_outs)}
+            {mixer_rows.map(([k, label]) => TableRow(label, mixer[k], k))}
           </tbody>
         </table>
         <table width="100%" className="ModelDetail-table">
@@ -82,15 +77,7 @@ const ModelDetail = ({ recorder }) => {
             </tr>
           </thead>
           <tbody>
-            {TableRow("recording tracks", rec_tracks)}
-            {TableRow("tracks recordable at once", simultaneous_rec_tracks)}
-            {TableRow("low speed", low_speed)}
-            {TableRow("normal speed", norm_speed)}
-            {TableRow("high speed", high_speed)}
-            {TableRow("noise reduction", noise_reduction)}
-            {TableRow("return to zero function", return_to_zero)}
-            {TableRow("memory locators", locators)}
-            {TableRow("pitch control (varispeed)", varispeed)}
+            {tape_rows.map(([k, label]) => TableRow(label, tape[k], k))}
           </tbody>
         </table>
       </div>
