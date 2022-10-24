@@ -2,20 +2,20 @@
   brand: Tascam
   year: 1996
   mixer:
-      mix_channels: 8
-      chan_eq: 2 band graphic
-      aux_sends: 2
-      aux_returns: n/a
-      individual_track_outs: n/a
+    mix_channels: 8
+    chan_eq: 2 band graphic
+    aux_sends: 2
+    aux_returns: n/a
+    individual_track_outs: n/a
   tape:
-      rec_tracks: 4
-      simultaneous_rec_tracks: 4
-      high_speed: 9.5 cm/s
-      noise_reduction: dbx
-      return_to_zero: yes
-      varispeed: ±12%
-      locators: n/a
+    rec_tracks: 4
+    simultaneous_rec_tracks: 4
+    high_speed: 9.5 cm/s
+    noise_reduction: dbx
+    return_to_zero: yes
+    varispeed: ±12%
+    locators: n/a
   links:
-      owner's manual: http://audiopro.r-massive.com/Tascam/Tascam%20%28TEAC%29%20414%20%28mk1%29%20Portastudio%20Owners%20Manual.pdf
-      service manual: http://audiopro.r-massive.com/Tascam/Tascam%20%28TEAC%29%20414%20%28mk1%29%20Service%20Manual.pdf
-      review (sound on sound): https://www.soundonsound.com/reviews/tascam-414
+    owner's manual: http://audiopro.r-massive.com/Tascam/Tascam%20%28TEAC%29%20414%20%28mk1%29%20Portastudio%20Owners%20Manual.pdf
+    service manual: http://audiopro.r-massive.com/Tascam/Tascam%20%28TEAC%29%20414%20%28mk1%29%20Service%20Manual.pdf
+    review (sound on sound): https://www.soundonsound.com/reviews/tascam-414
