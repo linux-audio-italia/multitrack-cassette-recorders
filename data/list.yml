@@ -5,13 +5,21 @@
     - MT8X
     - MT50
     - MT100
+    - MT120
 - brand: Tascam
   models:
+    - 244
+    - 246
+    - Porta One
+    - Porta Two
     - 414 mkI Portastudio
     - 414 mkII Portastudio
     - 424 mkI PortaStudio
     - 424 mkII PortaStudio
     - 424 mkIII PortaStudio
+    - 464 Portastudio
+    - 488 mkI Portastudio
+    - 488 mkII Portastudio
 - brand: Fostex
   models:
     - 250
@@ -24,7 +32,6 @@
 - brand: Teac
   models:
     - 144
-    - 244
 - brand: Marantz
   models:
     - PMD 740

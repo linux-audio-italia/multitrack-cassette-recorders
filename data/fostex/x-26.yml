@@ -10,7 +10,7 @@
     individual_track_outs: yes
   tape:
     rec_tracks: 4
-    max_simultaneous_rec_tracks: 2
+    simultaneous_rec_tracks: 2
     norm_speed: 4.75 cm/s
     noise_reduction: Dolby B
     return_to_zero: n/a
