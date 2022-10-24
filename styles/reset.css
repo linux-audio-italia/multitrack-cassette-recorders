@@ -75,3 +75,8 @@ p {
     scroll-behavior: auto !important;
   }
 }
+
+b,
+strong {
+  font-weight: 600;
+}

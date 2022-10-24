@@ -63,3 +63,8 @@ code {
   border-radius: var(--air-xxs);
   font-family: monospace;
 }
+
+.Page h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+}

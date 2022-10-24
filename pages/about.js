@@ -1,6 +1,8 @@
+import { fetchContributors } from "../lib/data_client";
 import ExternalLink from "../components/ExternalLink";
+import Contributors from "../components/Contributors";
 
-const About = () => (
+const About = ({ contributors }) => (
   <article className="Page">
     <header className="Page-head">
       <h1>About</h1>
@@ -22,8 +24,13 @@ const About = () => (
           />
         </figcaption>
       </figure>
+      <Contributors contributors={contributors} />
     </div>
   </article>
 );
+
+export const getStaticProps = async () => ({
+  props: { contributors: await fetchContributors() },
+});
 
 export default About;
