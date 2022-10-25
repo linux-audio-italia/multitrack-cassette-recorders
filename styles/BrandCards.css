@@ -4,7 +4,7 @@
   display: block;
   text-decoration: none;
   text-align: center;
-  padding: var(--air-l);
+  padding: var(--air) var(--air-l);
   font-weight: 600;
   transition: box-shadow 0.2s;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);

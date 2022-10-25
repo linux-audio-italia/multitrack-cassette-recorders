@@ -6,9 +6,7 @@ const Base = ({ children }) => {
   return (
     <>
       <SiteHeader />
-      <main className="SiteMain">
-        <div className="limit">{children}</div>
-      </main>
+      <main className="SiteMain limit">{children}</main>
       <SiteFooter />
     </>
   );
