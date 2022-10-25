@@ -9,7 +9,11 @@ import ModelNotFound from "../../components/ModelNotFound.js";
 
 const Model = ({ recorder, recorderDetails, error }) =>
   error === null ? (
-    <ModelDetail recorder={recorderDetails} />
+    <ModelDetail
+      recorder={recorderDetails}
+      images={recorder.images}
+      recorderOriginal={recorder}
+    />
   ) : (
     <ModelNotFound recorder={recorder} />
   );
