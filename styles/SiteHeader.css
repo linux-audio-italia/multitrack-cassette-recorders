@@ -6,7 +6,7 @@
     inset 0 12px 0 0 var(--palette4), inset 0 16px 0 0 var(--palette5);
 }
 
-.SiteHeader > nav > a {
+.SiteHeader nav > a {
   display: inline-block;
   text-decoration: none;
   font-size: 1.2rem;
@@ -22,4 +22,10 @@
   text-decoration: none;
   color: var(--black);
   margin-bottom: var(--air);
+}
+
+@media only screen and (max-width: 768px) {
+  .SiteHeader-logo {
+    font-size: 2.6rem;
+  }
 }
