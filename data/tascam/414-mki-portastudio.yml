@@ -1,6 +1,15 @@
-- name: portastudio 414 mk1
+- name: Portastudio 414 mkI
   brand: Tascam
   year: 1996
+  description: >
+    The Tascam 414 mk1 is a mid level recorder that offers good
+    features in a small package: it has two aux busses, and one of
+    them doubles as a cue monitor buss. It can record to four track
+    at a time and the routing is quite flexible with its 8 mixer
+    channels. It doesn't have individual track outputs, but you can
+    use the aux busses and the sync out (which is a tape out for
+    track 4) to get the four tape tracks signal separated.
+
   mixer:
     mix_channels: 8
     chan_eq: 2 band graphic

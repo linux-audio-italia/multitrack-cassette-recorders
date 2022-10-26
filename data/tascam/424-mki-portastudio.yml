@@ -1,0 +1,30 @@
+- name: Portastudio 424 mkI
+  brand: Tascam
+  year: 1990
+  description: >
+    The first iteration of the succesful 424 line with the
+    characteristic beige-box color of early personal computers has
+    only a limited 2 band graphic equalization on each channel, but
+    it's the only recorder that features the low speed of 2.4 cm/s
+    (half the normal cassette playing speed), making it a favourite
+    choice among the drone/ambient musicians.
+
+  mixer:
+    mix_channels: 8
+    chan_eq: 2 band graphic
+    aux_sends: 1
+    aux_returns: n/a
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 4
+    simultaneous_rec_tracks: 4
+    low_speed: 2.4 cm/s
+    norm_speed: 4.75 cm/s
+    high_speed: 9.5 cm/s
+    noise_reduction: dbx
+    return_to_zero: yes
+    varispeed: ±12%
+    locators: 1
+  links:
+    owner's manual: https://www.manualslib.com/manual/1260447/Tascam-Portastudio-424.html
+    service manual: http://audiopro.r-massive.com/Tascam/Tascam%20%28TEAC%29%20414%20%28mk1%29%20Service%20Manual.pdf
