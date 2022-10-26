@@ -54,7 +54,20 @@
   color: var(--palette5);
 }
 
-.ModelDetail-links h3 {
+h3 {
   color: var(--palette5);
   font-weight: 600;
+}
+
+.ModelDetail-gallery li {
+  list-style: none;
+  display: inline-block;
+}
+
+.ModelDetail-imageContainer {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  margin-right: var(--air);
 }

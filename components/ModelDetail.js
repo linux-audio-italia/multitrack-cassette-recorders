@@ -1,4 +1,5 @@
 import ExternalLink from "./ExternalLink";
+import Image from "next/image";
 
 const TableRow = (rowTitle, value, key = null) =>
   value ? (
@@ -25,7 +26,42 @@ const Links = ({ links }) => {
   );
 };
 
-const ModelDetail = ({ recorder }) => {
+const Gallery = ({ images, href }) => {
+  const gallery =
+    images.length === 0 ? (
+      <li>
+        There are no images available. If you want to contribute with images,
+        upload them to the folder <code>public/images/models{href}</code>
+      </li>
+    ) : (
+      images.map(({ size, path }) => (
+        <li key={path}>
+          <a
+            className="ModelDetail-imageContainer"
+            href={path}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              src={path}
+              alt={path}
+              width={size.width}
+              height={size.height}
+            />
+          </a>
+        </li>
+      ))
+    );
+
+  return (
+    <section className="ModelDetail-gallery">
+      <h3>Pictures</h3>
+      <ul>{gallery}</ul>
+    </section>
+  );
+};
+
+const ModelDetail = ({ recorder, images, recorderOriginal }) => {
   const links = recorder.links ? recorder.links : {};
   const tables = [
     {
@@ -57,6 +93,7 @@ const ModelDetail = ({ recorder }) => {
     },
   ];
 
+  console.log(recorderOriginal);
   return (
     <article className="Page">
       <header className="Page-head">
@@ -67,6 +104,7 @@ const ModelDetail = ({ recorder }) => {
       </header>
       <div className="Page-content">
         <p className="ModelDetail-description">{recorder.description}</p>
+        <Gallery images={images} href={recorderOriginal.href} />
         <Links links={links} />
         {tables.map((table) => (
           <table key={table.title} width="100%" className="ModelDetail-table">
