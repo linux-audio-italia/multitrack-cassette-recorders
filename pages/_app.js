@@ -8,6 +8,7 @@ import "../styles/Page.css";
 import "../styles/BrandCards.css";
 import "../styles/ModelCards.css";
 import "../styles/ModelDetail.css";
+import "../styles/Spinner.css";
 
 const MultitrackRecorders = ({ Component, pageProps }) => (
   <Base>

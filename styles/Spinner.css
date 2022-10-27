@@ -1,0 +1,18 @@
+@keyframes rotate {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.Spinner {
+  border-style: solid;
+  border-color: var(--palette2) transparent var(--palette2) transparent;
+  border-width: var(--air-xxs);
+  border-radius: 100%;
+  position: absolute;
+  width: var(--air-l);
+  height: var(--air-l);
+  top: 0;
+  left: 0;
+  animation: rotate infinite 0.5s;
+}
