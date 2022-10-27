@@ -18,7 +18,7 @@
     individual_track_outs: yes
   tape:
     rec_tracks: 4
-    low_speed: 4.75 cm/s
+    norm_speed: 4.75 cm/s
     high_speed: 9.5 cm/s
     simultaneous_rec_tracks: 4
     noise_reduction: dbx
