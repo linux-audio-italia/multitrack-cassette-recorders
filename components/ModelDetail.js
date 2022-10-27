@@ -42,6 +42,7 @@ const Gallery = ({ images, href }) => {
             target="_blank"
             rel="noreferrer"
           >
+            <div className="Spinner" />
             <Image
               src={path}
               alt={path}
