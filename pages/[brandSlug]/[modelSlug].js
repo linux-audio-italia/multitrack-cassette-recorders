@@ -7,13 +7,9 @@ import {
 import ModelDetail from "../../components/ModelDetail.js";
 import ModelNotFound from "../../components/ModelNotFound.js";
 
-const Model = ({ recorder, recorderDetails, error }) =>
+const Model = ({ recorder, error }) =>
   error === null ? (
-    <ModelDetail
-      recorder={recorderDetails}
-      images={recorder.images}
-      recorderOriginal={recorder}
-    />
+    <ModelDetail recorder={recorder} />
   ) : (
     <ModelNotFound recorder={recorder} />
   );
@@ -41,12 +37,11 @@ export async function getStaticProps({ params }) {
     params.brandSlug,
     params.modelSlug
   );
-  const recorderDetails = data.pop() || null;
+  recorder.info = data.pop() || null;
 
   return {
     props: {
       recorder,
-      recorderDetails,
       error,
     },
   };
