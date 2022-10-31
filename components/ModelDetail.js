@@ -1,72 +1,13 @@
-import ExternalLink from "./ExternalLink";
-import Image from "next/image";
+import TableRow from "./TableRow";
+import Links from "./Links";
+import Gallery from "./Gallery";
 
-const TableRow = (rowTitle, value, key = null) =>
-  value ? (
-    <tr key={key}>
-      <td>{rowTitle}</td>
-      <td>{value}</td>
-    </tr>
-  ) : null;
-
-const Links = ({ links }) => {
-  if (Object.keys(links).length == 0) return null;
-
-  return (
-    <aside className="ModelDetail-links">
-      <h3>Links</h3>
-      <ul>
-        {Object.keys(links).map((k) => (
-          <li key={k}>
-            <ExternalLink to={links[k]} text={k} />
-          </li>
-        ))}
-      </ul>
-    </aside>
-  );
-};
-
-const Gallery = ({ images, href }) => {
-  const gallery =
-    images.length === 0 ? (
-      <li>
-        There are no images available. If you want to contribute with images,
-        upload them to the folder <code>public/images/models{href}</code>
-      </li>
-    ) : (
-      images.map(({ size, path }) => (
-        <li key={path}>
-          <a
-            className="ModelDetail-imageContainer"
-            href={path}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="Spinner" />
-            <Image
-              src={path}
-              alt={path}
-              width={size.width}
-              height={size.height}
-            />
-          </a>
-        </li>
-      ))
-    );
-
-  return (
-    <section className="ModelDetail-gallery">
-      <h3>Pictures</h3>
-      <ul>{gallery}</ul>
-    </section>
-  );
-};
-
-const ModelDetail = ({ recorder, images, recorderOriginal }) => {
-  const links = recorder.links ? recorder.links : {};
+const ModelDetail = ({ recorder }) => {
+  const info = recorder.info;
+  const links = info.links ? info.links : {};
   const tables = [
     {
-      data: recorder.mixer ? recorder.mixer : {},
+      data: info.mixer ? info.mixer : {},
       title: "Mixer section",
       rows: [
         ["mix_channels", "number of channels"],
@@ -78,7 +19,7 @@ const ModelDetail = ({ recorder, images, recorderOriginal }) => {
       ],
     },
     {
-      data: recorder.tape ? recorder.tape : {},
+      data: info.tape ? info.tape : {},
       title: "Tape recorder section",
       rows: [
         ["rec_tracks", "recording tracks"],
@@ -94,18 +35,16 @@ const ModelDetail = ({ recorder, images, recorderOriginal }) => {
     },
   ];
 
-  console.log(recorderOriginal);
   return (
     <article className="Page">
       <header className="Page-head">
         <h1 className="ModelDetail-model">
-          {recorder.brand} {recorder.name}{" "}
-          {recorder.year && <>({recorder.year})</>}
+          {info.brand} {info.name} {info.year && <>({info.year})</>}
         </h1>
       </header>
       <div className="Page-content">
-        <p className="ModelDetail-description">{recorder.description}</p>
-        <Gallery images={images} href={recorderOriginal.href} />
+        <p className="ModelDetail-description">{info.description}</p>
+        <Gallery images={recorder.images} href={recorder.href} />
         <Links links={links} />
         {tables.map((table) => (
           <table key={table.title} width="100%" className="ModelDetail-table">
