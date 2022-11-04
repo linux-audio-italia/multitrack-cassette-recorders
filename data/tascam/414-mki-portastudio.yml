@@ -4,14 +4,14 @@
   description: >
     The Tascam 414 mk1 is a mid level recorder that offers good
     features in a small package: it has two aux busses, and one of
-    them doubles as a cue monitor buss. It can record to four track
+    them doubles as a cue monitor buss. It can record up to four track
     at a time and the routing is quite flexible with its 8 mixer
     channels. It doesn't have individual track outputs, but you can
-    use the aux busses and the sync out (which is a tape out for
-    track 4) to get the four tape tracks signal separated.
+    take advantage of the aux busses and the sync out (which is a tape
+    out for track 4) to get the four tape tracks signal separated.
 
   mixer:
-    mix_channels: 8
+    mix_channels: 4 mono, 2 stereo, 1 stereo sub in
     chan_eq: 2 band graphic
     aux_sends: 2
     aux_returns: n/a

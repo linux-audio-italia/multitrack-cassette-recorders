@@ -1,0 +1,31 @@
+- name: Portastudio 424 mkIII
+  brand: Tascam
+  year: 1999
+  description: >
+    This is the very last four track cassette recorder produced, and
+    one of the most sought after for its features, which are quite
+    comprehensive, and the very good audio specification. It has four
+    XLR inputs for directly connecting dynamic mics (unfortunately
+    there is no phantom power) and six complete mono channels with
+    three band eq (with sweepable mids) and effect sends. It has also
+    a stereo sub in that lets you connect an external mixer directly
+    into the master bus.
+
+  mixer:
+    mix_channels: 6 mono, 1 stereo, 1 stereo sub in
+    chan_eq: 3 band with semi-parametric mids
+    aux_sends: 2
+    aux_returns: n/a
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 4
+    simultaneous_rec_tracks: 4
+    norm_speed: 4.75 cm/s
+    high_speed: 9.5 cm/s
+    noise_reduction: dbx
+    return_to_zero: yes
+    varispeed: ±12%
+    locators: 2
+  links:
+    owner's manual: https://tascam.com/downloads/tascam/318/Porta_424mkIII_manual.pdf
+    review (sound on sound): https://www.soundonsound.com/reviews/tascam-424-mkiii-414-mkii
