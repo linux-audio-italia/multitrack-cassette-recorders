@@ -10,7 +10,7 @@
     choice among the drone/ambient musicians.
 
   mixer:
-    mix_channels: 8
+    mix_channels: 4 mono, 2 stereo
     chan_eq: 2 band graphic
     aux_sends: 1
     aux_returns: n/a
