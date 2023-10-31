@@ -1,0 +1,31 @@
+- name: X-55
+  brand: Fostex
+  year: 1988
+  description: >
+    The Fostex X-26 is an entry level machine that uses the normal
+    cassette speed and can record only on max two tracks at
+    once. It's very light and small and inaugurates Fostex trend of
+    using a single pot for two functions for saving space: a very
+    clever move that condensates in a single pot two controls and a
+    switch (it can be confusing at first). Here for example the aux
+    sends on channels 3-6 send the input signal if you turn them
+    before noon, and the track signal if you turn them past
+    noon. Even if it's a basic machine it has individual track
+    outputs and can produce decent recordings.
+  mixer:
+    mix_channels: 6 (2 mic/line and 4 line)
+    chan_eq: n/a
+    master_eq: 2 band graphic
+    aux_sends: 1
+    aux_returns: 1 stereo
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 4
+    simultaneous_rec_tracks: 2
+    norm_speed: 4.75 cm/s
+    noise_reduction: Dolby B
+    varispeed: ±15%
+    return_to_zero: n/a
+    locators: n/a
+  links:
+    manual: https://www.fostexinternational.com/public/fostex_download.php?f=x26_owners_manual.pdf
