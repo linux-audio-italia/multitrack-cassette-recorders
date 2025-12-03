@@ -1,0 +1,25 @@
+- name: 244
+  brand: Tascam
+  year: 1982
+  description: >
+    The Tascam 244 Portastudio is one of the most known and famous four track cassette recorders, and it's the direct heir of the very first Portastudio: the 144, which launched in 1979. It's big and heavy and features four big analog VU meters and two semi-parametric equalizers per channel. It runs only at double speed (9.5 cm/s) and uses a non-defeatable DBX noise reduction system.
+
+  mixer:
+    mix_channels: 4 mono
+    chan_eq: 2 band semi-parametric
+    aux_sends: 1 stereo
+    aux_returns: 1 stereo
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 4
+    simultaneous_rec_tracks: 4
+    high_speed: 9.5 cm/s
+    noise_reduction: dbx
+    return_to_zero: yes
+    varispeed: ±15%
+    locators: n/a
+  links:
+    owner's manual: https://www.manualslib.com/manual/4055973/Teac-Tascam-244-Portastudio.html
+    service manual: https://www.manualslib.com/manual/4070484/Tascam-Portastudio-244.html
+    review 1: https://www.muzines.co.uk/articles/tascam-244/4323
+    review 2: https://www.muzines.co.uk/articles/tascam-244-portastudio/5384
