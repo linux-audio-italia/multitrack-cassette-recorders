@@ -1,0 +1,22 @@
+- name: MT8X
+  brand: Yamaha
+  year: 1993
+  description: >
+    The Yamaha MT8X is a 8 track cassette recorder and a 8 channel mixer with pretty comprehensive routing options. It has two stereo buses where the mixer channels can be assigned and they can be recorded separately on four tracks at a time. It has also a cue mixer that can be used to monitor the sound present on tape without switching the mixer channels to tape. There are two post fader aux sends on every channel and two stereo aux returns for effects, that can be assigned to the busses as well.
+  mixer:
+    mix_channels: 4 mono mic/line, 3 mono line, 1 stereo line
+    chan_eq: 3 band graphic on mic channels, 2 band graphic on line channels
+    aux_sends: 2 mono
+    aux_returns: 2 stereo
+    individual_track_outs: yes
+  tape:
+    rec_tracks: 8
+    simultaneous_rec_tracks: 4
+    high_speed: 9.5 cm/s
+    noise_reduction: dbx
+    return_to_zero: yes
+    varispeed: ±12%
+    locators: 2
+  links:
+    owner's manual: https://medias.audiofanzine.com/files/yamaha-mt8x-479139.pdf
+    review (sound on sound): https://www.soundonsound.com/reviews/yamaha-mt8x
